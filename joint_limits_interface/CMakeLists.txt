@@ -12,7 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
 include_directories(
   include)
 include_directories(
-  SYSTEM
+  AFTER SYSTEM
   ${catkin_INCLUDE_DIRS}
   ${urdfdom_INCLUDE_DIRS}
 )

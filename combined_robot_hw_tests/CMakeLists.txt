@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 include_directories(include)
-include_directories(SYSTEM ${catkin_INCLUDE_DIRS})
+include_directories(AFTER SYSTEM ${catkin_INCLUDE_DIRS})
 
 catkin_package(
   INCLUDE_DIRS include

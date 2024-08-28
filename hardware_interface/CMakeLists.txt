@@ -4,7 +4,7 @@ project(hardware_interface)
 find_package(catkin REQUIRED COMPONENTS roscpp)
 
 include_directories(include)
-include_directories(SYSTEM ${catkin_INCLUDE_DIRS})
+include_directories(AFTER SYSTEM ${catkin_INCLUDE_DIRS})
 
 # Declare catkin package
 catkin_package(
@@ -15,7 +15,7 @@ catkin_package(
 if(CATKIN_ENABLE_TESTING)
 
   find_package(catkin REQUIRED COMPONENTS rosconsole) 
-  include_directories(SYSTEM ${catkin_INCLUDE_DIRS})
+  include_directories(AFTER SYSTEM ${catkin_INCLUDE_DIRS})
 
   catkin_add_gtest(hardware_resource_manager_test  test/hardware_resource_manager_test.cpp)
   target_link_libraries(hardware_resource_manager_test ${catkin_LIBRARIES})

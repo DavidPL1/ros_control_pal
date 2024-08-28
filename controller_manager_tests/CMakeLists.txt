@@ -6,7 +6,7 @@ find_package(catkin REQUIRED COMPONENTS controller_manager controller_interface)
 catkin_python_setup()
 
 include_directories(include)
-include_directories(SYSTEM ${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS})
+include_directories(AFTER SYSTEM ${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS})
 
 catkin_package(
   CATKIN_DEPENDS controller_manager controller_interface
